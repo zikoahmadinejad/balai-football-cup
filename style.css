@@ -1,0 +1,625 @@
+/* =================================
+   BALAI FOOTBALL CUP
+   MODERN FOOTBALL WEBSITE
+================================= */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: rgba(8, 8, 8, 0.96);
+    border-bottom: 2px solid #E63946;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #E63946;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #E63946;
+    bottom: -7px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #E63946;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.82),
+            rgba(80, 0, 0, 0.78)
+        ),
+        url("foto%20lapangan.jpg.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.subtitle {
+    color: #E63946;
+    letter-spacing: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    font-weight: 900;
+    line-height: 1;
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.description {
+    color: #eeeeee;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.button {
+    display: inline-block;
+    background: #E63946;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 1px solid #E63946;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: transparent;
+    color: #E63946;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.3);
+}
+
+/* ABOUT */
+.about {
+    padding: 100px 10%;
+    text-align: center;
+    background: linear-gradient(180deg, #111111, #1a0808);
+}
+
+.about h2 {
+    display: inline-block;
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.about h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #E63946;
+    margin: 15px auto 0;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #bdbdbd;
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* TEAMS */
+.teams {
+    padding: 100px 8%;
+    text-align: center;
+    background: #080808;
+}
+
+.section-subtitle {
+    color: #E63946;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.teams h2 {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.team-card {
+    width: 280px;
+    padding: 35px 20px;
+    background: linear-gradient(145deg, #1b1b1b, #100707);
+    border: 1px solid #492020;
+    border-radius: 12px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #E63946;
+}
+
+.team-card:hover {
+    transform: translateY(-12px);
+    border-color: #E63946;
+    box-shadow: 0 15px 35px rgba(230, 57, 70, 0.18);
+}
+
+.team-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    transition: 0.4s;
+}
+
+.team-card:hover img {
+    transform: scale(1.1);
+}
+
+.team-card h3 {
+    color: #E63946;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.team-card p {
+    color: #bbbbbb;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* VENUE */
+.venue {
+    min-height: 450px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(80, 0, 0, 0.75)
+        ),
+        url("foto%20lapangan.jpg.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.venue-content p:first-child {
+    color: #E63946;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.venue-content h2 {
+    font-size: clamp(28px, 5vw, 50px);
+    font-weight: 900;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.venue-content h3 {
+    color: #E63946;
+    font-size: 22px;
+    letter-spacing: 8px;
+    margin-bottom: 25px;
+}
+
+.venue-content p:last-child {
+    color: #eeeeee;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* GALERI */
+.galeri {
+    padding: 100px 8%;
+    text-align: center;
+    background: #101010;
+}
+
+.galeri h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.galeri > p {
+    color: #bbbbbb;
+    letter-spacing: 1px;
+}
+
+.galeri-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.galeri-item {
+    width: 80%;
+    max-width: 850px;
+    overflow: hidden;
+    border: 2px solid #8b0000;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.galeri-item img {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+.galeri-item:hover img {
+    transform: scale(1.06);
+}
+/* LEAGUE STANDINGS */
+.standings {
+    padding: 100px 7%;
+    text-align: center;
+    background: #101010;
+}
+
+.standings h2 {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.standings-description {
+    color: #aaaaaa;
+    margin-bottom: 40px;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid #492020;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    background: #171111;
+}
+
+thead {
+    background: #8b0000;
+}
+
+th {
+    padding: 18px 12px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 18px 12px;
+    border-bottom: 1px solid #302020;
+    font-size: 13px;
+}
+
+tbody tr {
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    background: #321414;
+}
+
+.club-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.club-name img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.points {
+    color: #E63946;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.standings-note {
+    color: #777777;
+    font-size: 11px;
+    margin-top: 20px;
+    font-style: italic;
+}
+/* SCHEDULE */
+.schedule {
+    padding: 100px 8%;
+    text-align: center;
+    background: linear-gradient(180deg, #100707, #080808);
+}
+
+.schedule h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 45px;
+}
+
+.schedule p {
+    position: relative;
+    background: linear-gradient(100deg, #211010, #151515);
+    border: 1px solid #492020;
+    padding: 25px;
+    margin: 18px auto;
+    max-width: 650px;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.schedule p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: #E63946;
+    border-radius: 8px 0 0 8px;
+}
+
+.schedule p:hover {
+    background: #8b0000;
+    transform: translateX(8px);
+    border-color: #E63946;
+}
+
+/* FOOTER */
+footer {
+    padding: 55px 20px;
+    text-align: center;
+    background: #050505;
+    border-top: 2px solid #8b0000;
+}
+
+footer h3 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #aaaaaa;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+footer p:last-child {
+    margin-top: 25px;
+    color: #E63946;
+    font-size: 12px;
+}
+
+/* BACK TO TOP */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    background: #E63946;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    background: white;
+    color: #E63946;
+    transform: translateY(-6px);
+}
+
+/* RESPONSIVE MOBILE */
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 55px);
+    }
+
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+
+    .description {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .about,
+    .teams,
+    .galeri,
+    .schedule {
+        padding: 70px 20px;
+    }
+
+    .about h2,
+    .teams h2,
+    .galeri h2,
+    .schedule h2 {
+        font-size: 28px;
+    }
+
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .venue {
+        min-height: 350px;
+    }
+
+    .venue-content h3 {
+        font-size: 17px;
+        letter-spacing: 5px;
+    }
+
+    .galeri-item {
+        width: 100%;
+    }
+
+    .schedule p {
+        font-size: 13px;
+        padding: 22px 15px;
+    }
+
+    footer h3 {
+        font-size: 21px;
+    }
+}
